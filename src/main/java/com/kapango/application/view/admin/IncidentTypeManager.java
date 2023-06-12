@@ -52,7 +52,6 @@ public class IncidentTypeManager extends Main implements HasComponents, HasStyle
 
         filter.setClearButtonVisible(true);
         filter.setPlaceholder("Incident type name");
-        add(filter);
         CrudLayout crudLayout = grid.getCrudLayout();
         crudLayout.addFilterComponent(filter);
         filter.setValueChangeMode(ValueChangeMode.LAZY);

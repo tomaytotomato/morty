@@ -1,0 +1,82 @@
+[
+  {
+    "name": "CI Deployment Failure",
+    "description": "An automated CI tool failed to deploy an application."
+  },
+  {
+    "name": "Manual Deployment Failure",
+    "description": "A user failed to deploy an application."
+  },
+  {
+    "name": "Internal Outage",
+    "description": "An internal system used by employees has stopped working."
+  },
+  {
+    "name": "External Outage",
+    "description": "A customer-facing system has stopped working."
+  },
+  {
+    "name": "Security Breach",
+    "description": "A malicious third party has gained access to the organization's systems."
+  },
+  {
+    "name": "Data Breach",
+    "description": "Personally Identifiable Information (PII) has been leaked from the organization."
+  },
+  {
+    "name": "Platform Outage",
+    "description": "The platform that runs the systems has become degraded or stopped working."
+  },
+  {
+    "name": "Chaos Monkey",
+    "description": "Incident triggered during chaos monkey game day."
+  },
+  {
+    "name": "Third Party",
+    "description": "A third-party system or organization has become degraded or stopped working, causing issues."
+  },
+  {
+    "name": "Software Bug/Error",
+    "description": "Incident caused by a software bug or unexpected error."
+  },
+  {
+    "name": "Performance Degradation",
+    "description": "Incident related to decreased system performance or slow response times."
+  },
+  {
+    "name": "Infrastructure Failure",
+    "description": "Incident caused by hardware or network failures."
+  },
+  {
+    "name": "Service Disruption",
+    "description": "Incident that disrupts specific services or functionalities within the application."
+  },
+  {
+    "name": "Data Integrity Issue",
+    "description": "Incident related to data corruption or data inconsistencies."
+  },
+  {
+    "name": "Service Level Agreement (SLA) Violation",
+    "description": "Incident where the application fails to meet defined SLA requirements."
+  },
+  {
+    "name": "User Access/Authorization Issue",
+    "description": "Incident related to user authentication, authorization, or access control problems."
+  },
+  {
+    "name": "Scheduled Maintenance",
+    "description": "Incident occurring during planned maintenance activities."
+  },
+  {
+    "name": "Integration Failure",
+    "description": "Incident caused by failures in integrating with external systems or APIs."
+  },
+  {
+    "name": "User Experience (UX) Issue",
+    "description": "Incident related to usability, design, or user interface problems."
+  },
+  {
+    "name": "Other",
+    "description": "For other incidents that don't fit the above options."
+  }
+]

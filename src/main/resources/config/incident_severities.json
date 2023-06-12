@@ -1,0 +1,39 @@
+[
+  {
+    "name": "Severity 1",
+    "abbreviation": "SEV-1",
+    "description": "System Down/Critical Impact Complete system failure."
+  },
+  {
+    "name": "Severity 2",
+    "abbreviation": "SEV-2",
+    "description": "Significant impact/severe service downgrade."
+  },
+  {
+    "name": "Severity 3",
+    "abbreviation": "SEV-3",
+    "description": "Minor impact/Most of the system is operational."
+  },
+  {
+    "name": "Severity 4",
+    "abbreviation": "SEV-4",
+    "description": "Informative/Low Impact."
+  },
+  {
+    "name": "Severity 5",
+    "abbreviation": "SEV-5",
+    "description": "Cosmetic or esoteric changes occurring."
+  },
+  {
+    "name": "Maintenance",
+    "abbreviation": "MT",
+    "description": "Maintenance of system has been planned.",
+    "anticipated": true
+  },
+  {
+    "name": "Chaos Monkey",
+    "abbreviation": "CM",
+    "description": "Chaos monkey is when developers take part in an organised game day to test the resilience of systems by degrading or turning off components or dependencies.",
+    "anticipated": true
+  }
+]

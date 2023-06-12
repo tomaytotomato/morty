@@ -47,8 +47,10 @@ public class IncidentEntity {
     @EqualsAndHashCode.Include
     private Integer id;
     @EqualsAndHashCode.Include
+    @Column(unique = true)
     private String name;
     @EqualsAndHashCode.Include
+    @Column(unique = true)
     private String reference;
     @Version
     private Long version;

@@ -3,7 +3,6 @@ package com.kapango.application.dto.incident;
 import com.kapango.application.dto.CommentDto;
 import com.kapango.application.dto.TagDto;
 import com.kapango.application.dto.UserDto;
-import com.kapango.infra.entity.incident.IncidentStatus;
 import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.List;
@@ -31,6 +30,7 @@ public class IncidentDto {
     private String source;
     private IncidentTypeDto type;
     private IncidentSeverityDto severity;
+    private IncidentPriority priority;
     private String rootCause;
     private Set<TagDto> tags;
     private List<IncidentEventDto> events;

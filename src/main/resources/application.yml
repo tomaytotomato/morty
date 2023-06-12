@@ -1,0 +1,36 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/morty
+    username: ${DB_USER:morty}
+    password: ${DB_PASSWORD:password}
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+  sql:
+    init:
+      mode: always
+
+  mustache:
+    check-template-location: false
+  application:
+    name: morty
+
+vaadin:
+  whitelisted-packages: com.vaadin,org.vaadin,dev.hilla,com.kapango
+  exclude-urls: /api/**, /api/swagger-ui.html
+springdoc:
+  swagger-ui:
+    enabled: true
+    disable-swagger-default-url: true
+    config-url: /api/swagger-ui.html
+
+morty:
+  infra:
+    admin-password: ${MORTY_ADMIN_PASSWORD:admin}
+    admin-username: ${MORTY_ADMIN_USERNAME:admin}
+    incident-severities-seed-file: "config/incident_severities.json"
+    incident-types-seed-file: "config/incident_types.json"

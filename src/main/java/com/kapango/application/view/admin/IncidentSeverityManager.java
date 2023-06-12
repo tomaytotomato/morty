@@ -12,6 +12,8 @@ import com.vaadin.flow.component.html.Main;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.notification.NotificationVariant;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
+import com.vaadin.flow.component.textfield.TextField;
+import com.vaadin.flow.data.value.ValueChangeMode;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.theme.lumo.LumoUtility.AlignItems;
@@ -24,6 +26,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.vaadin.crudui.crud.impl.GridCrud;
+import org.vaadin.crudui.layout.CrudLayout;
 
 @PageTitle("Incident Severity Manager")
 @Route(value = "incident-severity-manager", layout = MainLayout.class)
@@ -35,6 +38,8 @@ public class IncidentSeverityManager extends Main implements HasComponents, HasS
 
     private final GridCrud<IncidentSeverityDto> grid = new GridCrud<>(IncidentSeverityDto.class);
 
+    private final TextField filter = new TextField();
+
     @Autowired
     public IncidentSeverityManager(IncidentService incidentService, IncidentMapper mapper) {
         this.incidentService = incidentService;
@@ -44,12 +49,18 @@ public class IncidentSeverityManager extends Main implements HasComponents, HasS
 
     private void constructUI() {
 
-        var crudLayout = grid.getCrudLayout();
         addClassNames("crud-view");
         addClassNames(MaxWidth.SCREEN_LARGE, Bottom.LARGE, Horizontal.LARGE);
 
         var container = new HorizontalLayout();
         container.addClassNames(AlignItems.CENTER, JustifyContent.BETWEEN);
+
+        filter.setClearButtonVisible(true);
+        filter.setPlaceholder("Severity name");
+        CrudLayout crudLayout = grid.getCrudLayout();
+        crudLayout.addFilterComponent(filter);
+        filter.setValueChangeMode(ValueChangeMode.LAZY);
+        filter.addValueChangeListener(e -> grid.refreshGrid());
 
         grid.getCrudFormFactory().setUseBeanValidation(true);
         grid.getGrid().setColumns("id", "name", "description");
@@ -67,7 +78,7 @@ public class IncidentSeverityManager extends Main implements HasComponents, HasS
 
     @Override
     public List<IncidentSeverityDto> findAll() {
-        return incidentService.findAllIncidentSeverities("").stream().map(mapper::fromModel).collect(Collectors.toList());
+        return incidentService.findAllIncidentSeverities(filter.getValue()).stream().map(mapper::fromModel).collect(Collectors.toList());
     }
 
 

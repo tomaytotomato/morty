@@ -10,6 +10,7 @@
 @import url('./views/templates-view.css');
 @import url('./views/config-view.css');
 @import url('./views/statistics-view.css');
+@import url('./views/form-view.css');
 @import url('@fontsource/hind/index.css');    html {
       --lumo-border-radius-s: calc(var(--lumo-size-m) / 6);
       --lumo-border-radius-m: calc(var(--lumo-size-m) / 2);

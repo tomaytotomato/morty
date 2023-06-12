@@ -9,6 +9,7 @@ import com.kapango.application.view.admin.IncidentTypeManager;
 import com.kapango.application.view.admin.TagManager;
 import com.kapango.application.view.admin.UserManager;
 import com.kapango.application.view.createapostmortem.CreateaPostmortemView;
+import com.kapango.application.view.incident.CreateIncidentForm;
 import com.kapango.application.view.index.IndexView;
 import com.kapango.application.view.integrations.IntegrationsView;
 import com.kapango.application.view.postmortems.PostmortemsCollaborativeView;
@@ -86,29 +87,26 @@ public class MainLayout extends AppLayout {
 
         if (accessChecker.hasAccess(IndexView.class)) {
             nav.addItem(new AppNavItem("Index", IndexView.class, LineAwesomeIcon.FILE.create()));
-
         }
         if (accessChecker.hasAccess(CreateaPostmortemView.class)) {
             nav.addItem(
                 new AppNavItem("Create a Postmortem", CreateaPostmortemView.class, LineAwesomeIcon.EDIT.create()));
-
         }
         if (accessChecker.hasAccess(PostmortemsView.class)) {
             nav.addItem(new AppNavItem("Postmortems", PostmortemsView.class, LineAwesomeIcon.NEWSPAPER.create()));
-
         }
         if (accessChecker.hasAccess(PostmortemsCollaborativeView.class)) {
             nav.addItem(new AppNavItem("Postmortems-Collab", PostmortemsCollaborativeView.class, LineAwesomeIcon.NEWSPAPER.create()));
-
         }
         if (accessChecker.hasAccess(IntegrationsView.class)) {
             nav.addItem(new AppNavItem("Listeners", IntegrationsView.class, LineAwesomeIcon.PLUG_SOLID.create()));
-
         }
         if (accessChecker.hasAccess(TagManager.class)) {
             nav.addItem(new AppNavItem("Tag Manager", TagManager.class, LineAwesomeIcon.TAGS_SOLID.create()));
         }
-
+        if (accessChecker.hasAccess(CreateIncidentForm.class)) {
+            nav.addItem(new AppNavItem("Create Incident", CreateIncidentForm.class, LineAwesomeIcon.EDIT.create()));
+        }
         if (accessChecker.hasAccess(IncidentTypeManager.class)) {
             nav.addItem(new AppNavItem("Incident Type Manager", IncidentTypeManager.class, LineAwesomeIcon.EXPAND_SOLID.create()));
         }

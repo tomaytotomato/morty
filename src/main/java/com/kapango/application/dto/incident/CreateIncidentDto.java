@@ -2,7 +2,6 @@ package com.kapango.application.dto.incident;
 
 import com.kapango.application.dto.TagDto;
 import com.kapango.application.dto.UserDto;
-import com.kapango.infra.entity.incident.IncidentStatus;
 import java.util.HashMap;
 import java.util.Set;
 import lombok.AllArgsConstructor;
@@ -22,6 +21,7 @@ public class CreateIncidentDto {
     private IncidentStatus status = IncidentStatus.CREATED;
     private IncidentTypeDto type;
     private IncidentSeverityDto severity;
+    private IncidentPriority priority;
     private String source;
     private Set<TagDto> tags;
     private HashMap<String, String> metaData;
