@@ -1,0 +1,48 @@
+@import url('./main-layout.css');
+@import url('./views/index-view.css');
+@import url('./views/gradient-backgrounds.css');
+@import url('./views/postmortems-view.css');
+@import url('./views/integrations-view.css');
+@import url('./views/card-list-view.css');
+@import url('./views/postmortems-collaborative-view.css');
+@import url('./views/list-view.css');
+@import url('./views/collaborative-master-detail-view.css');
+@import url('./views/templates-view.css');
+@import url('./views/config-view.css');
+@import url('./views/statistics-view.css');
+@import url('@fontsource/hind/index.css');    html {
+      --lumo-border-radius-s: calc(var(--lumo-size-m) / 6);
+      --lumo-border-radius-m: calc(var(--lumo-size-m) / 2);
+      --lumo-border-radius-l: var(--lumo-size-m);
+--lumo-font-family: Hind;
+
+    }
+
+    [theme~="dark"] {
+      --lumo-base-color: rgb(40, 42, 54);
+      --lumo-primary-color: rgb(98, 114, 164);
+      --lumo-primary-color-50pct: rgba(98, 114, 164, 0.5);
+      --lumo-primary-color-10pct: rgba(98, 114, 164, 0.1);
+      --lumo-error-color: rgb(255, 82, 82);
+      --lumo-error-color-50pct: rgba(255, 82, 82, 0.5);
+      --lumo-error-color-10pct: rgba(255, 82, 82, 0.1);
+      --lumo-success-color: rgb(139, 233, 253);
+      --lumo-success-color-50pct: rgba(139, 233, 253, 0.5);
+      --lumo-success-color-10pct: rgba(139, 233, 253, 0.1);
+      --lumo-shade: rgb(68, 71, 90);
+      --lumo-shade-5pct: rgba(68, 71, 90, 0.05);
+      --lumo-shade-10pct: rgba(68, 71, 90, 0.1);
+      --lumo-shade-20pct: rgba(68, 71, 90, 0.2);
+      --lumo-shade-30pct: rgba(68, 71, 90, 0.3);
+      --lumo-shade-40pct: rgba(68, 71, 90, 0.4);
+      --lumo-shade-50pct: rgba(68, 71, 90, 0.5);
+      --lumo-shade-60pct: rgba(68, 71, 90, 0.6);
+      --lumo-shade-70pct: rgba(68, 71, 90, 0.7);
+      --lumo-shade-80pct: rgba(68, 71, 90, 0.8);
+      --lumo-shade-90pct: rgba(68, 71, 90, 0.9);
+      --lumo-body-text-color: rgb(248, 248, 242);
+      --lumo-primary-text-color: rgb(189, 147, 249);
+      --lumo-error-text-color: rgb(255, 85, 85);
+      --lumo-success-text-color: rgb(80, 250, 123);
+
+    }

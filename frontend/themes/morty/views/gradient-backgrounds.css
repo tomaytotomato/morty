@@ -1,0 +1,29 @@
+.neutral {
+  background: rgb(55,252,245);
+  background: radial-gradient(circle, rgba(55,252,245,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+.good {
+  background: rgb(55,252,162);
+  background: radial-gradient(circle, rgba(55,252,162,1) 0%, rgba(55,252,245,1) 100%);
+}
+
+.ok {
+  background: rgb(216,252,55);
+  background: radial-gradient(circle, rgba(216,252,55,1) 0%, rgba(55,252,162,1) 100%);
+}
+
+.not-great-not-terrible {
+  background: rgb(252,205,55);
+  background: radial-gradient(circle, rgba(252,205,55,1) 0%, rgba(216,252,55,1) 100%);
+}
+
+.bad {
+  background: rgb(252,129,55);
+  background: radial-gradient(circle, rgba(252,129,55,1) 0%, rgba(252,205,55,1) 100%);
+}
+
+.danger {
+  background: rgb(250,17,17);
+  background: radial-gradient(circle, rgba(250,17,17,1) 0%, rgba(252,129,55,1) 100%);
+}

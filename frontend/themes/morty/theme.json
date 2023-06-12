@@ -1,0 +1,9 @@
+{
+  "lumoImports" : [ "typography", "color", "spacing", "badge", "utility" ],
+  "assets" : {
+    "@fontsource/hind" : {
+      "*.css" : "@fontsource/hind",
+      "files/*" : "@fontsource/hind/files"
+    }
+  }
+}
